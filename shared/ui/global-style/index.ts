@@ -26,6 +26,7 @@ export const theme: DefaultTheme = {
         primary: '#F5F5F5',
         secondary: '#E9E9E9',
         contrast: '#222222',
+        alt: '#F97369',
     },
     colors: {
         primary: '#000000',
