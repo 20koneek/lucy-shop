@@ -1,30 +1,13 @@
-import {createGlobalStyle, ThemeProvider} from 'styled-components'
-import {AppProps} from "next/app";
+import type { FC } from 'react'
+import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle, theme } from '../shared/ui'
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
-
-const theme = {
-    colors: {
-        primary: '#0070f3',
-    },
-}
-
-
-const App = ({Component, pageProps}: AppProps) => {
-    return (
-        <>
-            <GlobalStyle/>
-            <ThemeProvider theme={theme}>
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </>
-    )
-}
+const App: FC<AppProps> = ({ Component, pageProps }) => (
+    <ThemeProvider theme={theme}>
+        <GlobalStyle/>
+        <Component {...pageProps} />
+    </ThemeProvider>
+)
 
 export default App

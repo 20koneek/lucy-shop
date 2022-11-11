@@ -7,8 +7,12 @@ declare module 'styled-components' {
         contrast: string,
     }
 
+    export interface ExtendColors extends Colors {
+        alt: string
+    }
+
     export interface DefaultTheme {
         background: Colors,
-        colors: Colors,
+        colors: ExtendColors,
     }
 }
