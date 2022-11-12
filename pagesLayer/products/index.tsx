@@ -1,16 +1,15 @@
 import type { FC } from 'react'
 import Link from 'next/link'
 import { Grid, MainLayout } from '../../shared/ui'
-import { Props } from './types'
-import api from './api'
 import { ProductCard } from '../../entities'
+import { Props } from './types'
 
-export const Products: FC<Props> = () => (
+export const Products: FC<Props> = ({ data }) => (
     <MainLayout title="New in">
         <Grid>
-            {api.data.map((product) => (
+            {data.map((product) => (
                 <Link key={product.id} href={`/products/${product.id}`}>
-                    <ProductCard product={product as any}/>
+                    <ProductCard product={product}/>
                 </Link>
             ))}
         </Grid>

@@ -12,3 +12,11 @@ export type ProductType = {
     priceInCents: number,
     specialInCents: number,
 }
+
+export type ResponseType = {
+    data: ProductType[],
+    count: number,
+    total: number,
+    pageCount: number,
+    page: number,
+}
