@@ -1,4 +1,5 @@
 export { Badge } from './badge'
+export { Delimiter } from './delimiter'
 export { GlobalStyle, theme } from './global-style'
 export { Icon } from './icon'
 export { Circle, Typography } from './typography'
