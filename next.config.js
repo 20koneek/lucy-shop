@@ -6,7 +6,17 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
-    webpack: (config, { dev, isServer }) => {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'media.lucyinthesky.com',
+                port: '',
+                pathname: '/data/**',
+            },
+        ],
+    },
+    webpack: (config, {dev, isServer}) => {
         if (dev && !isServer) {
             config.plugins.push(new ForkTsCheckerWebpackPlugin())
         }
