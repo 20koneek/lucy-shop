@@ -1,9 +1,15 @@
+import { FC } from 'react'
+import Link from 'next/link'
 import { Logo, Nav } from './ui'
 import { CardButton } from '../../entities'
 
-export const Header = () => (
+export const Header: FC = () => (
     <Nav>
-        <Logo/>
-        <CardButton count={13}/>
+        <Link href="/">
+            <Logo/>
+        </Link>
+        <Link href="/card">
+            <CardButton count={13}/>
+        </Link>
     </Nav>
 )
