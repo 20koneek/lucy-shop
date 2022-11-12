@@ -1,6 +1,8 @@
 export { Badge } from './badge'
 export { Delimiter } from './delimiter'
 export { GlobalStyle, theme } from './global-style'
+export { Grid } from './grid'
 export { Icon } from './icon'
+export { InlineFlex } from './inline-flex'
 export { Main, MainGrid, MainLayout } from './main'
 export { Circle, Typography } from './typography'

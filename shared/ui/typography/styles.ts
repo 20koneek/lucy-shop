@@ -3,6 +3,8 @@ import type { Size, Weight } from './types'
 
 export const ItalicStyle = css`font-style: italic;`
 
+export const LineThrough = css`text-decoration: line-through;`
+
 export const FontSizeStyle: Record<Size, ReturnType<typeof css>> = {
     xs: css`
       font-size: 9px;

@@ -1,10 +1,12 @@
 import styled from 'styled-components'
-import { FontSizeStyle, ItalicStyle, SizeStyle, WeightStyle } from './styles'
+import { FontSizeStyle, ItalicStyle, LineThrough, SizeStyle, WeightStyle } from './styles'
 import type { Props } from './types'
 
 export const Typography = styled.div<Props>`
+  -webkit-font-smoothing: antialiased;
   font-weight: ${({ weight = 'lighter' }) => WeightStyle[weight]};
   color: ${({ theme, type = 'primary' }) => theme.colors[type]};
+  ${({ lineThrough }) => lineThrough ? LineThrough : ''}
   ${({ italic }) => italic ? ItalicStyle : ''}
   ${({ size = 'l' }) => FontSizeStyle[size]}
 `

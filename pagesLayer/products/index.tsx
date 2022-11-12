@@ -1,22 +1,15 @@
 import type { FC } from 'react'
-import Image from 'next/image'
-import { MainLayout } from '../../shared/ui'
+import { Grid, MainLayout } from '../../shared/ui'
 import { Props } from './types'
 import api from './api'
+import { ProductCard } from '../../entities'
 
 export const Products: FC<Props> = () => (
     <MainLayout title="New in">
-        {api.data.map(({ id, image, name }) => (
-            <div key={id}>
-                <div style={{ width: 100, height: 100, position: 'relative' }}>
-                    <Image
-                        src={image} alt={name}
-                        fill
-                        sizes={`auto`}
-                    />
-                </div>
-                {name}
-            </div>
-        ))}
+        <Grid>
+            {api.data.map((product) => (
+                <ProductCard key={product.id} product={product as any}/>
+            ))}
+        </Grid>
     </MainLayout>
 )

@@ -8,4 +8,5 @@ export type Props = Partial<{
     italic: boolean
     weight: Weight
     size: Size
+    lineThrough: boolean
 }>
