@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { ProductImage } from '../../entities'
+import { Price, ProductImage, Sizes } from '../../entities'
 import { Area } from '../../shared/ui'
 import { Container, Description, SizeForm } from './ui'
 import { Props } from './types'
@@ -25,7 +25,12 @@ export const ProductDetailCard: FC<Props> = ({
             />
         </Area>
 
-        <Area area="size">
+        <Area area="info">
+            <Sizes sizes={sizes}/>
+            <Price price={price} special={special}/>
+        </Area>
+
+        <Area area="form">
             <SizeForm
                 id={id}
                 sizes={sizes}
