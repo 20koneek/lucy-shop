@@ -1,25 +1,30 @@
 import { FC } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { cardAtom } from '../../../../shared/model'
+import { cardAtom, Key } from '../../../../shared/model'
 import { InlineFlex, Typography } from '../../../../shared/ui'
 import { Params, Props } from './types'
 
-export const SizeForm: FC<Props> = ({ id, price, sizes }) => {
+export const SizeForm: FC<Props> = ({ id, name, image, price, sizes }) => {
     const setCard = useSetRecoilState(cardAtom)
     const { register, handleSubmit, reset } = useForm<Params>()
 
     const onSubmit: SubmitHandler<Params> = ({ size, count }) => {
+        const key: Key = `${id}_${size}`
+
         setCard((prevCard) => ({
             ...prevCard,
-            [id]: {
-                ...prevCard[id],
-                [size]: {
-                    price,
-                    count: (prevCard[id]?.[size]?.count ?? 0) + Number(count),
-                },
+            [key]: prevCard[key] ? {
+                ...prevCard[key],
+                count: prevCard[key].count + Number(count),
+            } : {
+                id,
+                name,
+                image,
+                size,
+                price,
+                count: Number(count),
             },
-
         }))
         reset()
     }

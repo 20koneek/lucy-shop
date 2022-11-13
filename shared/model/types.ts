@@ -1,5 +1,12 @@
 import { SizeType } from '../api'
 
-export type CardItem = Partial<Record<SizeType, { price: number, count: number }>>
-
-export type CardStore = Record<string, CardItem>
+export type Key = `${number}_${SizeType}`
+export type CardItem = {
+    id: number
+    name: string
+    image: string
+    size: string
+    price: number
+    count: number
+}
+export type CardStore = Record<Key, CardItem>

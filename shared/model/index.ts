@@ -9,3 +9,5 @@ export const cardAtom = atom<CardStore>({
 export const initializeRecoilState = ({ set }: MutableSnapshot) => {
     set(cardAtom, {})
 }
+
+export * from './types'

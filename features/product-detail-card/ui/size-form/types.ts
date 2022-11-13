@@ -7,6 +7,8 @@ export type Params = {
 
 export type Props = {
     id: number
+    name: string
+    image: string
     price: number
     sizes: SizeType[]
 }

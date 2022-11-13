@@ -33,6 +33,8 @@ export const ProductDetailCard: FC<Props> = ({
         <Area area="form">
             <SizeForm
                 id={id}
+                name={name}
+                image={image}
                 sizes={sizes}
                 price={specialInCents || priceInCents}
             />
