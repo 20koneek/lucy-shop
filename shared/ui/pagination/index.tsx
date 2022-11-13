@@ -8,6 +8,7 @@ import { Typography } from '../typography'
 
 const Body = styled.div`
   display: inline-flex;
+  align-self: flex-start;
   gap: 1px;
   height: 36px;
   overflow: hidden;
