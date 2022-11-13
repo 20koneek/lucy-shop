@@ -1,15 +1,17 @@
 import type { FC } from 'react'
-import { MainLayout } from '../../shared/ui'
 import { useRecoilValue } from 'recoil'
+import { ProductCardItem } from '../../features'
+import { MainLayout } from '../../shared/ui'
 import { cardAtom } from '../../shared/model'
 
 export const Card: FC = () => {
     const card = useRecoilValue(cardAtom)
-    console.log(card)
+
     return (
         <MainLayout title="Card">
-            {/*<ProductDetailCard*/}
-            {/*/>*/}
+            {Object.entries(card).map(([key, props]) => (
+                <ProductCardItem key={key} {...props}/>
+            ))}
         </MainLayout>
     )
 }

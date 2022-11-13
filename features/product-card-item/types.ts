@@ -1,9 +1,3 @@
-import { SizeType } from '../../shared/api'
+import { CardItem } from '../../shared/model'
 
-export type Props = {
-    image: string
-    name: string
-    sizes: SizeType[]
-    price: string
-    special: string
-}
+export type Props = CardItem
