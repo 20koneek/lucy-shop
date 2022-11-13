@@ -17,9 +17,11 @@ const BadgeCircle = styled(Circle)`
   transform-origin: 100% 0;
 `
 
-export const Badge: FC<PropsWithChildren<Props>> = ({ children, count }) => (
+export const Badge: FC<PropsWithChildren<Props>> = ({ children, count, withZero }) => (
     <BadgeBody>
         {children}
-        <BadgeCircle size="xs" weight="bold">{count}</BadgeCircle>
+        {(count || withZero) && (
+            <BadgeCircle size="xs" weight="bold">{count}</BadgeCircle>
+        )}
     </BadgeBody>
 )
