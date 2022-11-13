@@ -13,4 +13,5 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
         props: result,
     }
 }
+
 export default Products

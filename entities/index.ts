@@ -1,2 +1,3 @@
 export { CardButton } from './card-button'
-export { ProductCard } from './product-card'
+export { Price } from './price'
+export { ProductImage } from './product-image'

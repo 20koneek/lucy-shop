@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { InlineFlex, Typography } from '../../../../shared/ui'
+import { InlineFlex, Typography } from '../../shared/ui'
 import { Props } from './types'
 
 export const Price: FC<Props> = ({ price, special }) => (

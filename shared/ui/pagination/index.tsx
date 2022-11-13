@@ -17,6 +17,7 @@ const Body = styled.div`
   border: 1px solid ${({ theme }) => theme.pagination.border};
   background-color: ${({ theme }) => theme.pagination.border};
 `
+
 const ButtonStyle = css`
   display: inline-flex;
   align-items: center;

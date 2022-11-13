@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { Typography } from '../../../../shared/ui'
-import { Props } from './types'
-import { Price } from '../price'
+import { Price } from '../../../../entities'
 import { Container } from '../container'
+import { Props } from './types'
 
 export const InfoBlock: FC<Props> = ({ name, sizes, price, special }) => (
     <Container>

@@ -1,19 +1,16 @@
-import styled from 'styled-components'
-import { FC } from "react";
+import { Product } from '../../pagesLayer'
+import { ProductType } from '../../shared/api'
 
-const Title = styled.h1`
-  font-size: 50px;
-`
+type GetServerSideProps = ({ query }: { query: { uid: string } }) => Promise<{ props: ProductType }>
 
-const Product: FC = () => {
-    return <Title>Product</Title>
-}
-
-export const getServerSideProps: ({ query }: { query: any }) => { props: { uid: string | string[] | undefined } } = ({ query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     const { uid } = query
 
+    const response = await fetch(`https://mock-server-production.up.railway.app/product/${uid}`)
+    const result: ProductType = await response.json()
+
     return {
-        props: { uid },
+        props: result,
     }
 }
 
