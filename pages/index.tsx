@@ -1,4 +1,4 @@
-import { Products } from '../pagesLayer'
+import { Products } from '../pages-layer'
 import { ResponseType } from '../shared/api'
 
 type GetServerSideProps = ({ query }: { query: { page?: number } }) => Promise<{ props: ResponseType }>
