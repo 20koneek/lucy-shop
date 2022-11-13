@@ -4,8 +4,7 @@ import { Area, InlineFlex, Typography } from '../../shared/ui'
 import { Container } from './ui'
 import { Props } from './types'
 import Link from 'next/link'
-
-const formator = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'USD' })
+import { formator } from '../../shared/utils'
 
 export const ProductCardItem: FC<Props> = ({
     id,
