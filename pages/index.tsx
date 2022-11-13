@@ -1,7 +1,7 @@
 import { Products } from '../pagesLayer'
 import { ResponseType } from '../shared/api'
 
-type GetServerSideProps = ({ query }: { query: { page?: number } }) => Promise<{ props: ResponseType & { page: number } }>
+type GetServerSideProps = ({ query }: { query: { page?: number } }) => Promise<{ props: ResponseType }>
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     const { page = 1 } = query
@@ -10,10 +10,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     const result: ResponseType = await response.json()
 
     return {
-        props: {
-            ...result,
-            page: Number(page),
-        },
+        props: result,
     }
 }
 export default Products

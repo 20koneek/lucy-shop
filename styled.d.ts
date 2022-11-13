@@ -11,5 +11,8 @@ declare module 'styled-components' {
     export interface DefaultTheme {
         background: Colors,
         colors: Colors,
+        pagination: {
+            border: string,
+        }
     }
 }

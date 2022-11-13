@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -38,5 +38,8 @@ export const theme: DefaultTheme = {
         secondary: '#62636D',
         contrast: '#FFFFFF',
         alt: '#F97369',
+    },
+    pagination: {
+        border: '#DEE2E6',
     },
 }
