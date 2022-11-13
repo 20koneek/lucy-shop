@@ -1,16 +1,15 @@
 import type { FC } from 'react'
-import { ProductDetailCard } from '../../features'
 import { MainLayout } from '../../shared/ui'
-import { Props } from './types'
+import { useRecoilValue } from 'recoil'
+import { cardAtom } from '../../shared/model'
 
-export const Card: FC<Props> = ({ name, sizes, image, price, special }) => (
-    <MainLayout title={name}>
-        <ProductDetailCard
-            name={name}
-            sizes={sizes}
-            image={image}
-            price={price}
-            special={special}
-        />
-    </MainLayout>
-)
+export const Card: FC = () => {
+    const card = useRecoilValue(cardAtom)
+    console.log(card)
+    return (
+        <MainLayout title="Card">
+            {/*<ProductDetailCard*/}
+            {/*/>*/}
+        </MainLayout>
+    )
+}
