@@ -1,3 +1,4 @@
+export { Area } from './area'
 export { Badge } from './badge'
 export { Delimiter } from './delimiter'
 export { GlobalStyle, theme } from './global-style'

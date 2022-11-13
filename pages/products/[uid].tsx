@@ -1,7 +1,7 @@
 import { Product } from '../../pages-layer'
 import { ProductType } from '../../shared/api'
 
-type GetServerSideProps = ({ query }: { query: { uid: string } }) => Promise<{ props: ProductType }>
+type GetServerSideProps = ({ query }: { query: { uid: number } }) => Promise<{ props: ProductType }>
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     const { uid } = query

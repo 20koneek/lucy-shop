@@ -8,6 +8,5 @@ export const Grid = styled.div`
   @media only screen and (max-width: 768px)  {
     grid-template-columns: 1fr;
     grid-gap: 33px;
-  }
-  
+  }  
 `

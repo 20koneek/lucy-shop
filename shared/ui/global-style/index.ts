@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: Styrene B LC, -apple-system, sans-serif;
+    font-family: Avenir, -apple-system, sans-serif;
     letter-spacing: 0;
   }
 `
