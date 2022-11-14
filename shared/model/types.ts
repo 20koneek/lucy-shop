@@ -5,7 +5,7 @@ export type CardItem = {
     id: number
     name: string
     image: string
-    size: string
+    size: SizeType
     price: number
     count: number
 }

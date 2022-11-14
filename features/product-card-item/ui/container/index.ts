@@ -9,15 +9,18 @@ export const Container = styled.div`
     "image size" auto
     "image price" auto
     "image count" auto
-    "image description" 1fr 
+    "image ." 1fr 
+    "image action" auto 
     / 1fr 4fr;
 
   @media only screen and (max-width: 768px) {
     grid-template: 
         "image" auto
-        "info" auto
-        "form" auto
-        "description" auto
+        "header" auto
+        "size" auto
+        "price" auto
+        "count" auto
+        "action" auto 
         / 1fr;
   }
 `

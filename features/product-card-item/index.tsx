@@ -1,10 +1,10 @@
 import type { FC } from 'react'
+import Link from 'next/link'
 import { ProductImage } from '../../entities'
 import { Area, InlineFlex, Typography } from '../../shared/ui'
-import { Container } from './ui'
-import { Props } from './types'
-import Link from 'next/link'
 import { formator } from '../../shared/utils'
+import { Container, CountForm } from './ui'
+import { Props } from './types'
 
 export const ProductCardItem: FC<Props> = ({
     id,
@@ -49,6 +49,14 @@ export const ProductCardItem: FC<Props> = ({
                 <Typography size="l">Count:</Typography>
                 <Typography size="l" type="secondary">{count}</Typography>
             </InlineFlex>
+        </Area>
+
+        <Area area="action">
+            <CountForm
+                id={id}
+                size={size}
+                count={count}
+            />
         </Area>
     </Container>
 )
