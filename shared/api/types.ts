@@ -20,3 +20,6 @@ export type ResponseType = {
     pageCount: number,
     page: number,
 }
+export type OrderType = {
+    orderId: number
+}
